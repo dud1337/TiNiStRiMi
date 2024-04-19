@@ -1,7 +1,7 @@
 ![tinistrimi_logo](https://github.com/dud1337/TiNiStRiMi/assets/5631021/b9d17de4-61b4-48fe-b7ea-d41413990547)
 ---
 Simple streaming platform with sub-second latency. Suits small communities. Give the streamer password 
-to a user, they can stream with OBS, anyone else can watch in browser. Uses [mediamtx](https://github.com/bluenviron/mediamtx).
+to a user: They can stream with OBS, and anyone can watch in browser. Uses [mediamtx](https://github.com/bluenviron/mediamtx).
 
 https://github.com/dud1337/TiNiStRiMi/assets/5631021/907e55d1-a791-4366-b062-962d2230d96d
 
