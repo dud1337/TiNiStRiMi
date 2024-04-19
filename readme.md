@@ -1,4 +1,4 @@
-# tinistrimi
+# TiNiStRiMi
 Personal streaming. Give a password to someone, they can stream with OBS, anyone else can watch in browser. Uses [mediamtx](https://github.com/bluenviron/mediamtx).
 
 * Supports RTMP and WHIP (webrtc)
