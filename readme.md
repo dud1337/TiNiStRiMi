@@ -1,5 +1,7 @@
-# TiNiStRiMi
-Simple streaming platform. Suits small communities. Give the streamer password to someone, they can stream with OBS, anyone else can watch in browser. Uses [mediamtx](https://github.com/bluenviron/mediamtx).
+![tinistrimi_logo](https://github.com/dud1337/TiNiStRiMi/assets/5631021/b9d17de4-61b4-48fe-b7ea-d41413990547)
+---
+Simple streaming platform. Suits small communities. Give the streamer password 
+to a user, they can stream with OBS, anyone else can watch in browser. Uses [mediamtx](https://github.com/bluenviron/mediamtx).
 
 * Supports RTMP and WHIP (webrtc)
 * Dynamically provides a link to in-browser LLHLS and webrtc viewing
@@ -22,7 +24,7 @@ docker run -e "TINISTRIMI_PASSWORD=<your password>" \
 ```
 
 #### docker compose (recommended) 
-``
+```
 git clone https://github.com/dud1337/tinistrimi
 cd tinistrimi/src-compose
 ```
@@ -44,17 +46,20 @@ docker compose up
 Default password is `TiNiStRiMi`.
 
 For WHIP (recommended - requires OBS 30+), File, Settings, Stream
-* Service: WHIP
-* Server: http://streamer:<your password>@<your domain/ip>:8080/stream/whip
-* Bearer Token: 
+* Service: `WHIP`
+* Server: `http://streamer:<your password>@<your domain/ip>:8080/stream/whip`
+* Bearer Token:
+
+**If WHIP isn't viewable in the browser when locally testing, it may be due to firefox not liking UDP traffic to localhost - try from a different host**
 
 For RTMP (only option with streamlabs from android):
-* Service: Custom...
-* Server: rtmp://<your domain/ip>
-* Stream Key: stream?user=streamer&pass=<your password>
+* Service: `Custom...`
+* Server: `rtmp://<your domain/ip>`
+* Stream Key: `stream?user=streamer&pass=<your password>`
 
 ### 1.3 Viewing
-Navigate to http://<your domain/ip>:8080 Click 'Watch' - only shows if someone is streaming
+1. Navigate to `http://<your domain/ip>:8080`
+2. Click 'Watch' - only shows if someone is streaming
 
 ## 2. Advanced Config
 Consider bind mount volumes for `www` and `mediamtx.yml` to further customise.
