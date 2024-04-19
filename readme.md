@@ -20,7 +20,7 @@ For WHIP (webrtc) to work, one needs to provide a host. At the time of writing, 
 docker pull dud1337/tinistrimi:latest
 docker run -e "TINISTRIMI_PASSWORD=<your password>" \
            -e "TINISTRIMI_WEBRTC_HOSTS=<your ips or hosts separated by commas if more than one>" \
-           -p 1935:1935 -p 8080:80 -p 8189:8189/udp dud1337/TiNiStRiMi:latest
+           -p 1935:1935 -p 8080:80 -p 8189:8189/udp dud1337/tinistrimi:latest
 ```
 
 #### docker compose (recommended) 
