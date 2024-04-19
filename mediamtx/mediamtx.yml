@@ -555,7 +555,7 @@ pathDefaults:
   # * RTSP_PORT: RTSP server port
   # * G1, G2, ...: regular expression groups, if path name is
   #   a regular expression.
-  runOnDemand: ffmpeg -hide_banner -loglevel error -re -stream_loop -1 -i /data/media/crash.webm -c copy -strict experimental -f rtsp rtsp://localhost:8554/stream?ondemand
+  runOnDemand: ffmpeg -hide_banner -loglevel error -re -stream_loop -1 -i /data/media/nostream.webm -c copy -strict experimental -f rtsp rtsp://localhost:8554/stream?ondemand
   # Restart the command if it exits.
   runOnDemandRestart: no
   # Readers will be put on hold until the runOnDemand command starts publishing

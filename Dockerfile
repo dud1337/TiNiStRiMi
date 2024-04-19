@@ -2,6 +2,7 @@ FROM bluenviron/mediamtx:latest-ffmpeg
 
 RUN apk add --no-cache nginx
 
+COPY ./mediamtx/nostream.webm /data/media/nostream.webm
 COPY ./scripts /data/scripts
 COPY ./mediamtx/mediamtx.yml /mediamtx.yml
 COPY ./nginx.conf /etc/nginx/nginx.conf

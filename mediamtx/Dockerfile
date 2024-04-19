@@ -1,5 +1,6 @@
 FROM bluenviron/mediamtx:latest-ffmpeg
 
+COPY ./nostream.webm /data/media/nostream.webm
 COPY ./scripts /data/scripts
 COPY ./mediamtx.yml /mediamtx.yml
 COPY ./start.sh /start.sh
