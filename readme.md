@@ -13,7 +13,7 @@ For WHIP (webrtc) to work, one needs to provide a host. At the time of writing, 
 
 ## 1. Guide
 
-### 1.1 Run docker image or service(s)
+### 1.1 Start Server
 #### **Option 1 (demo):** dockerhub image
 
 ```
@@ -42,13 +42,16 @@ docker compose build --pull
 docker compose up
 ```
 
-### 1.2 OBS configuration
+### 1.2 OBS Configuration
 Default password is `TiNiStRiMi`.
 
 For WHIP (recommended - requires OBS 30+), File, Settings, Stream
 * Service: `WHIP`
 * Server: `http://streamer:<your password>@<your domain/ip>:8080/stream/whip`
 * Bearer Token:
+
+![image](https://github.com/dud1337/TiNiStRiMi/assets/5631021/8896876e-b5a3-44a3-b49c-7efe20e09c68)
+
 
 **If WHIP isn't viewable in the browser when locally testing, it may be due to firefox not liking UDP traffic to localhost - try from a different host**
 
@@ -57,7 +60,10 @@ For RTMP (only option with streamlabs from android):
 * Server: `rtmp://<your domain/ip>`
 * Stream Key: `stream?user=streamer&pass=<your password>`
 
-### 1.3 Viewing
+![image](https://github.com/dud1337/TiNiStRiMi/assets/5631021/d6c74c26-7279-4277-91a2-544ec9427d2e)
+
+
+### 1.3 Viewing the Stream
 1. Navigate to `http://<your domain/ip>:8080`
 2. Click 'Watch' - only shows if someone is streaming
 
