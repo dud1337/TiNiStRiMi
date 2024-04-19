@@ -3,6 +3,8 @@
 Simple streaming platform. Suits small communities. Give the streamer password 
 to a user, they can stream with OBS, anyone else can watch in browser. Uses [mediamtx](https://github.com/bluenviron/mediamtx).
 
+https://github.com/dud1337/TiNiStRiMi/assets/5631021/3a764b4a-5c08-4bae-bf53-925f1e9c41f7
+
 * Supports RTMP and WHIP (webrtc)
 * Dynamically provides a link to in-browser LLHLS and webrtc viewing
     * *i.e., you can watch in browser*
