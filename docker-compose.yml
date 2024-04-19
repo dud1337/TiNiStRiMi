@@ -1,0 +1,36 @@
+services:
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    hostname: tinistrimi-nginx
+    restart: no
+    ports:
+      - "0.0.0.0:8080:80"
+    volumes:
+      - shared:/shared
+      - /etc/localtime:/etc/localtime:ro
+    networks:
+      - default
+
+  mediamtx:
+    build:
+      context: ./mediamtx
+      dockerfile: Dockerfile
+    hostname: tinistrimi-mediamtx
+    restart: no
+    ports:
+      - "0.0.0.0:1935:1935"
+      - "0.0.0.0:8189:8189/udp"
+    environment:
+      TINISTRIMI_PASSWORD: butts
+      TINISTRIMI_WEBRTC_HOSTS: <your ip/domain list separted by commas> # e.g. 192.168.1.15,yourstream.com
+    volumes:
+      - shared:/shared
+      - /etc/localtime:/etc/localtime:ro
+    networks:
+      - default
+
+volumes:
+  shared:
+    driver: local
