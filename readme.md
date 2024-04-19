@@ -1,6 +1,6 @@
 ![tinistrimi_logo](https://github.com/dud1337/TiNiStRiMi/assets/5631021/b9d17de4-61b4-48fe-b7ea-d41413990547)
 ---
-Simple streaming platform. Suits small communities. Give the streamer password 
+Simple streaming platform with sub-second latency. Suits small communities. Give the streamer password 
 to a user, they can stream with OBS, anyone else can watch in browser. Uses [mediamtx](https://github.com/bluenviron/mediamtx).
 
 https://github.com/dud1337/TiNiStRiMi/assets/5631021/907e55d1-a791-4366-b062-962d2230d96d
@@ -22,7 +22,10 @@ For WHIP (webrtc) to work, one needs to provide a host. At the time of writing, 
 docker pull dud1337/tinistrimi:latest
 docker run -e "TINISTRIMI_PASSWORD=<your password>" \
            -e "TINISTRIMI_WEBRTC_HOSTS=<your ips or hosts separated by commas if more than one>" \
-           -p 1935:1935 -p 8080:80 -p 8189:8189/udp dud1337/tinistrimi:latest
+           -p 1935:1935 \
+           -p 8080:80 \
+           -p 8189:8189/udp \
+           dud1337/tinistrimi:latest
 ```
 
 #### **Option 2 (recommended):** docker compose
