@@ -26,7 +26,7 @@ docker run -e "TINISTRIMI_PASSWORD=<your password>" \
 #### docker compose (recommended) 
 ```
 git clone https://github.com/dud1337/tinistrimi
-cd tinistrimi/src-compose
+cd tinistrimi
 ```
 Edit the environment variables in docker-compose.yml:
 ```yml
