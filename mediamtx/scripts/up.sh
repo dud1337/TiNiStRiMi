@@ -5,6 +5,6 @@ if [ -n "$2" ] && [ "$2" = "ondemand" ]; then
 fi
 
 echo -n "{\"status\":\"online\",\"type\":\"$1\"}" > /shared/status.json
-if [ -n "$OPSDROID_AUTH_TOKEN" ]; then
-    wget --header="Authorization: Bearer $OPSDROID_AUTH_TOKEN" --post-data='{"stream_state_change":"start"}' -O /dev/null "$OPSDROID_STREAM_ENDPOINT/skill/TiNiStRiMi-opsdroid/update"
+if [ -n "$OPSDROID_WEBHOOK_TOKEN" ]; then
+    wget --header="Authorization: Bearer $OPSDROID_WEBHOOK_TOKEN" --post-data='{"stream_state_change":"start"}' -O /dev/null "$OPSDROID_WEBHOOK_BASE/skill/TiNiStRiMi-opsdroid/update"
 fi
